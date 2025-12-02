@@ -1,4 +1,8 @@
-# Valid
+# SwiftValid
+
+![Swift 6.0+](https://img.shields.io/badge/Swift-6.0+-orange.svg)
+![Platforms](https://img.shields.io/badge/Platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20visionOS%20%7C%20Linux-lightgrey.svg)
+![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 A modern, composable validation library for Swift 6 with strict concurrency support.
 
@@ -21,7 +25,7 @@ Add the following to your `Package.swift` file:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/your-username/swift-valid.git", from: "0.1.0")
+    .package(url: "https://github.com/CorvidLabs/swift-valid.git", from: "0.1.0")
 ]
 ```
 
