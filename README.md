@@ -1,11 +1,8 @@
 # SwiftValid
 
-[![Swift 6.0+](https://img.shields.io/badge/Swift-6.0+-orange.svg)](https://swift.org)
-[![Platforms](https://img.shields.io/badge/Platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20visionOS-lightgrey.svg)](https://developer.apple.com/documentation/)
-[![SPM Compatible](https://img.shields.io/badge/SPM-Compatible-brightgreen.svg)](https://swift.org/package-manager/)
-[![CI](https://github.com/0xLeif/swift-valid/workflows/CI/badge.svg)](https://github.com/0xLeif/swift-valid/actions)
-[![Documentation](https://img.shields.io/badge/Documentation-DocC-blue.svg)](https://0xleif.github.io/swift-valid/documentation/valid/)
-[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![CI](https://img.shields.io/github/actions/workflow/status/CorvidLabs/swift-valid/ci.yml?label=CI&branch=main)](https://github.com/CorvidLabs/swift-valid/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/CorvidLabs/swift-valid)](https://github.com/CorvidLabs/swift-valid/blob/main/LICENSE)
+[![Version](https://img.shields.io/github/v/release/CorvidLabs/swift-valid)](https://github.com/CorvidLabs/swift-valid/releases)
 
 A modern, composable validation library for Swift 6 with strict concurrency support.
 
