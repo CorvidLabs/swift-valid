@@ -1,2 +1,63 @@
+# Swift Package Manager
 .build/
 .swiftpm/
+Package.resolved
+
+# Xcode
+xcuserdata/
+*.xcodeproj
+*.xcworkspace
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Build Products
+build/
+*.o
+*.lo
+*.a
+*.la
+*.so
+*.dylib
+
+# Documentation
+docs/
+.docc-build/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+.coverage
+*.profraw
+*.profdata

@@ -1,8 +1,11 @@
 # SwiftValid
 
-![Swift 6.0+](https://img.shields.io/badge/Swift-6.0+-orange.svg)
-![Platforms](https://img.shields.io/badge/Platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20visionOS%20%7C%20Linux-lightgrey.svg)
-![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
+[![Swift 6.0+](https://img.shields.io/badge/Swift-6.0+-orange.svg)](https://swift.org)
+[![Platforms](https://img.shields.io/badge/Platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20visionOS-lightgrey.svg)](https://developer.apple.com/documentation/)
+[![SPM Compatible](https://img.shields.io/badge/SPM-Compatible-brightgreen.svg)](https://swift.org/package-manager/)
+[![CI](https://github.com/0xLeif/swift-valid/workflows/CI/badge.svg)](https://github.com/0xLeif/swift-valid/actions)
+[![Documentation](https://img.shields.io/badge/Documentation-DocC-blue.svg)](https://0xleif.github.io/swift-valid/documentation/valid/)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 A modern, composable validation library for Swift 6 with strict concurrency support.
 
@@ -25,7 +28,7 @@ Add the following to your `Package.swift` file:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/CorvidLabs/swift-valid.git", from: "0.1.0")
+    .package(url: "https://github.com/0xLeif/swift-valid.git", from: "0.1.0")
 ]
 ```
 
@@ -35,7 +38,9 @@ Then add `Valid` to your target dependencies:
 targets: [
     .target(
         name: "YourTarget",
-        dependencies: ["Valid"]
+        dependencies: [
+            .product(name: "Valid", package: "swift-valid")
+        ]
     )
 ]
 ```
@@ -223,10 +228,10 @@ Valid follows the distinctive 0xLeif Swift development patterns:
 
 ## Platform Support
 
-- iOS 15.0+
-- macOS 12.0+
-- tvOS 15.0+
-- watchOS 8.0+
+- iOS 16.0+
+- macOS 13.0+
+- tvOS 16.0+
+- watchOS 9.0+
 - visionOS 1.0+
 
 ## License

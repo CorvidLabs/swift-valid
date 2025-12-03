@@ -67,6 +67,18 @@ extension PropertyValidator {
 // MARK: - Schema Builder
 
 /// A result builder for creating validation schemas.
+///
+/// `SchemaBuilder` allows you to compose multiple property validators
+/// using a declarative syntax with the `@SchemaBuilder` attribute.
+///
+/// ## Example
+/// ```swift
+/// let validator = Schema<User>.build {
+///     Schema.property(\.username, fieldName: "username", validator: LengthValidator(range: 3...20))
+///     Schema.property(\.email, fieldName: "email", validator: EmailValidator())
+///     Schema.property(\.age, fieldName: "age", validator: RangeValidator(range: 18...120))
+/// }
+/// ```
 @resultBuilder
 public struct SchemaBuilder<Root> where Root: Sendable {
     public static func buildBlock<V: Validator>(_ validator: V) -> V where V.Value == Root {
@@ -127,6 +139,19 @@ public struct SchemaBuilder<Root> where Root: Sendable {
 // MARK: - Schema Helper
 
 /// Helper for building validation schemas.
+///
+/// `Schema` provides a namespace for schema-building functionality,
+/// including the `build` method for creating validators using result builders
+/// and the `property` methods for creating property validators.
+///
+/// ## Topics
+///
+/// ### Building Schemas
+/// - ``build(_:)``
+///
+/// ### Creating Property Validators
+/// - ``property(_:fieldName:validator:)``
+/// - ``property(_:fieldName:validate:)``
 public enum Schema<Root> where Root: Sendable {
     /// Creates a validator from a result builder.
     ///

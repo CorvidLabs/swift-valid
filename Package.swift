@@ -21,10 +21,16 @@ let package = Package(
         .package(url: "https://github.com/swiftlang/swift-docc-plugin", from: "1.4.3")
     ],
     targets: [
-        .target(name: "Valid"),
+        .target(
+            name: "Valid",
+            swiftSettings: [
+                .enableUpcomingFeature("ExistentialAny")
+            ]
+        ),
         .testTarget(
             name: "ValidTests",
             dependencies: ["Valid"]
         )
-    ]
+    ],
+    swiftLanguageModes: [.v6]
 )
