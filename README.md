@@ -1,6 +1,7 @@
 # SwiftValid
 
-[![CI](https://img.shields.io/github/actions/workflow/status/CorvidLabs/swift-valid/ci.yml?label=CI&branch=main)](https://github.com/CorvidLabs/swift-valid/actions/workflows/ci.yml)
+[![macOS](https://img.shields.io/github/actions/workflow/status/CorvidLabs/swift-valid/macOS.yml?label=macOS&branch=main)](https://github.com/CorvidLabs/swift-valid/actions/workflows/macOS.yml)
+[![Ubuntu](https://img.shields.io/github/actions/workflow/status/CorvidLabs/swift-valid/ubuntu.yml?label=Ubuntu&branch=main)](https://github.com/CorvidLabs/swift-valid/actions/workflows/ubuntu.yml)
 [![License](https://img.shields.io/github/license/CorvidLabs/swift-valid)](https://github.com/CorvidLabs/swift-valid/blob/main/LICENSE)
 [![Version](https://img.shields.io/github/v/release/CorvidLabs/swift-valid)](https://github.com/CorvidLabs/swift-valid/releases)
 
