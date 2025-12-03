@@ -2,9 +2,11 @@
 ///
 /// Implement this protocol to provide validation logic for your custom types.
 public protocol Validatable: Sendable {
-    /// Validates this instance.
-    ///
-    /// - Returns: A validation result indicating success or failure.
+    /**
+     Validates this instance.
+
+     - Returns: A validation result indicating success or failure.
+     */
     func validate() -> ValidationResult
 }
 
@@ -19,9 +21,11 @@ extension Validatable {
         validate().errors
     }
 
-    /// Validates this instance and throws if validation fails.
-    ///
-    /// - Throws: The first validation error if validation fails.
+    /**
+     Validates this instance and throws if validation fails.
+
+     - Throws: The first validation error if validation fails.
+     */
     public func validateOrThrow() throws {
         let result = validate()
         guard case .invalid(let errors) = result, let firstError = errors.first else {
@@ -32,9 +36,11 @@ extension Validatable {
 }
 
 extension Validatable {
-    /// Creates a validator for this type.
-    ///
-    /// - Returns: A validator that calls the instance's validate method.
+    /**
+     Creates a validator for this type.
+
+     - Returns: A validator that calls the instance's validate method.
+     */
     public static func validator() -> AnyValidator<Self> {
         AnyValidator { instance in
             instance.validate()

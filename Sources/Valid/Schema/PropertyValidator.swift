@@ -8,12 +8,14 @@ where Root: Sendable, Value: Sendable {
     private let fieldName: String
     private let valueValidator: AnyValidator<Value>
 
-    /// Creates a property validator.
-    ///
-    /// - Parameters:
-    ///   - keyPath: The key path to the property.
-    ///   - fieldName: The name of the field for error messages.
-    ///   - validator: The validator to apply to the property value.
+    /**
+     Creates a property validator.
+
+     - Parameters:
+       - keyPath: The key path to the property.
+       - fieldName: The name of the field for error messages.
+       - validator: The validator to apply to the property value.
+     */
     public init<V: Validator>(
         _ keyPath: KeyPath<Root, Value>,
         fieldName: String,
@@ -45,12 +47,14 @@ where Root: Sendable, Value: Sendable {
 extension PropertyValidator: @unchecked Sendable where Root: Sendable, Value: Sendable {}
 
 extension PropertyValidator {
-    /// Creates a property validator using a custom validation closure.
-    ///
-    /// - Parameters:
-    ///   - keyPath: The key path to the property.
-    ///   - fieldName: The name of the field for error messages.
-    ///   - validate: The validation closure.
+    /**
+     Creates a property validator using a custom validation closure.
+
+     - Parameters:
+       - keyPath: The key path to the property.
+       - fieldName: The name of the field for error messages.
+       - validate: The validation closure.
+     */
     public init(
         _ keyPath: KeyPath<Root, Value>,
         fieldName: String,
@@ -66,19 +70,21 @@ extension PropertyValidator {
 
 // MARK: - Schema Builder
 
-/// A result builder for creating validation schemas.
-///
-/// `SchemaBuilder` allows you to compose multiple property validators
-/// using a declarative syntax with the `@SchemaBuilder` attribute.
-///
-/// ## Example
-/// ```swift
-/// let validator = Schema<User>.build {
-///     Schema.property(\.username, fieldName: "username", validator: LengthValidator(range: 3...20))
-///     Schema.property(\.email, fieldName: "email", validator: EmailValidator())
-///     Schema.property(\.age, fieldName: "age", validator: RangeValidator(range: 18...120))
-/// }
-/// ```
+/**
+ A result builder for creating validation schemas.
+
+ `SchemaBuilder` allows you to compose multiple property validators
+ using a declarative syntax with the `@SchemaBuilder` attribute.
+
+ ## Example
+ ```swift
+ let validator = Schema<User>.build {
+     Schema.property(\.username, fieldName: "username", validator: LengthValidator(range: 3...20))
+     Schema.property(\.email, fieldName: "email", validator: EmailValidator())
+     Schema.property(\.age, fieldName: "age", validator: RangeValidator(range: 18...120))
+ }
+ ```
+ */
 @resultBuilder
 public struct SchemaBuilder<Root> where Root: Sendable {
     public static func buildBlock<V: Validator>(_ validator: V) -> V where V.Value == Root {
@@ -153,23 +159,27 @@ public struct SchemaBuilder<Root> where Root: Sendable {
 /// - ``property(_:fieldName:validator:)``
 /// - ``property(_:fieldName:validate:)``
 public enum Schema<Root> where Root: Sendable {
-    /// Creates a validator from a result builder.
-    ///
-    /// - Parameter builder: The schema builder.
-    /// - Returns: A validator for the schema.
+    /**
+     Creates a validator from a result builder.
+
+     - Parameter builder: The schema builder.
+     - Returns: A validator for the schema.
+     */
     public static func build<V: Validator>(
         @SchemaBuilder<Root> _ builder: () -> V
     ) -> V where V.Value == Root {
         builder()
     }
 
-    /// Creates a property validator.
-    ///
-    /// - Parameters:
-    ///   - keyPath: The key path to the property.
-    ///   - fieldName: The name of the field for error messages.
-    ///   - validator: The validator to apply to the property value.
-    /// - Returns: A property validator.
+    /**
+     Creates a property validator.
+
+     - Parameters:
+       - keyPath: The key path to the property.
+       - fieldName: The name of the field for error messages.
+       - validator: The validator to apply to the property value.
+     - Returns: A property validator.
+     */
     public static func property<Value, V: Validator>(
         _ keyPath: KeyPath<Root, Value>,
         fieldName: String,
@@ -178,13 +188,15 @@ public enum Schema<Root> where Root: Sendable {
         PropertyValidator(keyPath, fieldName: fieldName, validator: validator)
     }
 
-    /// Creates a property validator using a validation closure.
-    ///
-    /// - Parameters:
-    ///   - keyPath: The key path to the property.
-    ///   - fieldName: The name of the field for error messages.
-    ///   - validate: The validation closure.
-    /// - Returns: A property validator.
+    /**
+     Creates a property validator using a validation closure.
+
+     - Parameters:
+       - keyPath: The key path to the property.
+       - fieldName: The name of the field for error messages.
+       - validate: The validation closure.
+     - Returns: A property validator.
+     */
     public static func property<Value>(
         _ keyPath: KeyPath<Root, Value>,
         fieldName: String,

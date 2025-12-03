@@ -8,9 +8,11 @@ public struct CountValidator<C: Collection & Sendable>: Validator, Sendable {
 
     private let range: ClosedRange<Int>
 
-    /// Creates a count validator.
-    ///
-    /// - Parameter range: The acceptable count range.
+    /**
+     Creates a count validator.
+
+     - Parameter range: The acceptable count range.
+     */
     public init(range: ClosedRange<Int>) {
         self.range = range
     }
@@ -29,23 +31,29 @@ public struct CountValidator<C: Collection & Sendable>: Validator, Sendable {
 }
 
 extension CountValidator {
-    /// Creates a validator for exact count.
-    ///
-    /// - Parameter count: The required count.
+    /**
+     Creates a validator for exact count.
+
+     - Parameter count: The required count.
+     */
     public static func exactly(_ count: Int) -> CountValidator<C> {
         CountValidator(range: count...count)
     }
 
-    /// Creates a validator for minimum count.
-    ///
-    /// - Parameter minimum: The minimum count.
+    /**
+     Creates a validator for minimum count.
+
+     - Parameter minimum: The minimum count.
+     */
     public static func minimum(_ minimum: Int) -> CountValidator<C> {
         CountValidator(range: minimum...Int.max)
     }
 
-    /// Creates a validator for maximum count.
-    ///
-    /// - Parameter maximum: The maximum count.
+    /**
+     Creates a validator for maximum count.
+
+     - Parameter maximum: The maximum count.
+     */
     public static func maximum(_ maximum: Int) -> CountValidator<C> {
         CountValidator(range: 0...maximum)
     }
@@ -73,9 +81,11 @@ where C.Element == V.Value {
 
     private let elementValidator: V
 
-    /// Creates an each validator.
-    ///
-    /// - Parameter elementValidator: The validator to apply to each element.
+    /**
+     Creates an each validator.
+
+     - Parameter elementValidator: The validator to apply to each element.
+     */
     public init(elementValidator: V) {
         self.elementValidator = elementValidator
     }
@@ -141,9 +151,11 @@ where C.Element: Equatable & Sendable {
 
     private let element: C.Element
 
-    /// Creates a contains element validator.
-    ///
-    /// - Parameter element: The element to search for.
+    /**
+     Creates a contains element validator.
+
+     - Parameter element: The element to search for.
+     */
     public init(element: C.Element) {
         self.element = element
     }
@@ -167,11 +179,13 @@ public struct AllSatisfyValidator<C: Collection & Sendable>: Validator, Sendable
     private let predicate: @Sendable (C.Element) -> Bool
     private let message: String
 
-    /// Creates an all-satisfy validator.
-    ///
-    /// - Parameters:
-    ///   - message: The error message when validation fails.
-    ///   - predicate: The predicate each element must satisfy.
+    /**
+     Creates an all-satisfy validator.
+
+     - Parameters:
+       - message: The error message when validation fails.
+       - predicate: The predicate each element must satisfy.
+     */
     public init(
         message: String = "Not all elements satisfy the condition",
         predicate: @escaping @Sendable (C.Element) -> Bool
@@ -199,9 +213,11 @@ where C.Element: Comparable {
         case descending
     }
 
-    /// Creates a sorted validator.
-    ///
-    /// - Parameter order: The expected sort order.
+    /**
+     Creates a sorted validator.
+
+     - Parameter order: The expected sort order.
+     */
     public init(order: SortOrder = .ascending) {
         self.order = order
     }

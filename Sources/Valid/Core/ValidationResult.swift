@@ -27,10 +27,12 @@ public enum ValidationResult: Sendable, Hashable {
         return errors
     }
 
-    /// Combines two validation results using logical AND.
-    ///
-    /// - Parameter other: The other validation result.
-    /// - Returns: A combined result that is valid only if both are valid.
+    /**
+     Combines two validation results using logical AND.
+
+     - Parameter other: The other validation result.
+     - Returns: A combined result that is valid only if both are valid.
+     */
     public func and(_ other: ValidationResult) -> ValidationResult {
         switch (self, other) {
         case (.valid, .valid):
@@ -42,10 +44,12 @@ public enum ValidationResult: Sendable, Hashable {
         }
     }
 
-    /// Combines two validation results using logical OR.
-    ///
-    /// - Parameter other: The other validation result.
-    /// - Returns: A combined result that is valid if either is valid.
+    /**
+     Combines two validation results using logical OR.
+
+     - Parameter other: The other validation result.
+     - Returns: A combined result that is valid if either is valid.
+     */
     public func or(_ other: ValidationResult) -> ValidationResult {
         switch (self, other) {
         case (.valid, _), (_, .valid):
@@ -57,12 +61,14 @@ public enum ValidationResult: Sendable, Hashable {
 }
 
 extension ValidationResult {
-    /// Creates a validation result from a boolean condition.
-    ///
-    /// - Parameters:
-    ///   - condition: The condition to evaluate.
-    ///   - error: The error to use if the condition is false.
-    /// - Returns: A validation result.
+    /**
+     Creates a validation result from a boolean condition.
+
+     - Parameters:
+       - condition: The condition to evaluate.
+       - error: The error to use if the condition is false.
+     - Returns: A validation result.
+     */
     public static func from(
         _ condition: Bool,
         error: ValidError
@@ -70,12 +76,14 @@ extension ValidationResult {
         condition ? .valid : .invalid([error])
     }
 
-    /// Creates a validation result from a boolean condition.
-    ///
-    /// - Parameters:
-    ///   - condition: The condition to evaluate.
-    ///   - message: The error message if the condition is false.
-    /// - Returns: A validation result.
+    /**
+     Creates a validation result from a boolean condition.
+
+     - Parameters:
+       - condition: The condition to evaluate.
+       - message: The error message if the condition is false.
+     - Returns: A validation result.
+     */
     public static func from(
         _ condition: Bool,
         message: String

@@ -8,11 +8,13 @@ where First.Value == Second.Value {
     private let first: First
     private let second: Second
 
-    /// Creates an OR validator from two validators.
-    ///
-    /// - Parameters:
-    ///   - first: The first validator.
-    ///   - second: The second validator.
+    /**
+     Creates an OR validator from two validators.
+
+     - Parameters:
+       - first: The first validator.
+       - second: The second validator.
+     */
     public init(first: First, second: Second) {
         self.first = first
         self.second = second
@@ -24,10 +26,12 @@ where First.Value == Second.Value {
 }
 
 extension OrValidator {
-    /// Chains another validator using OR.
-    ///
-    /// - Parameter other: The validator to chain.
-    /// - Returns: A combined validator.
+    /**
+     Chains another validator using OR.
+
+     - Parameter other: The validator to chain.
+     - Returns: A combined validator.
+     */
     public func or<V: Validator>(_ other: V) -> OrValidator<Self, V> where V.Value == Value {
         OrValidator<Self, V>(first: self, second: other)
     }

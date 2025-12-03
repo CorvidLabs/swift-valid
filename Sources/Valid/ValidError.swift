@@ -6,11 +6,13 @@ public struct ValidError: Error, Sendable, Hashable, CustomStringConvertible {
     /// Optional context about where or why the validation failed.
     public let context: [String: String]
 
-    /// Creates a validation error with a message and optional context.
-    ///
-    /// - Parameters:
-    ///   - message: The error message.
-    ///   - context: Additional context information.
+    /**
+     Creates a validation error with a message and optional context.
+
+     - Parameters:
+       - message: The error message.
+       - context: Additional context information.
+     */
     public init(
         message: String,
         context: [String: String] = [:]
@@ -33,11 +35,13 @@ public struct ValidError: Error, Sendable, Hashable, CustomStringConvertible {
 }
 
 extension ValidError {
-    /// Creates a validation error with a field context.
-    ///
-    /// - Parameters:
-    ///   - message: The error message.
-    ///   - field: The field name that failed validation.
+    /**
+     Creates a validation error with a field context.
+
+     - Parameters:
+       - message: The error message.
+       - field: The field name that failed validation.
+     */
     public static func field(_ field: String, message: String) -> ValidError {
         ValidError(
             message: message,

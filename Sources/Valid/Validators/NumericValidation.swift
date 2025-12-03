@@ -6,9 +6,11 @@ import Foundation
 public struct RangeValidator<Value: Comparable & Sendable>: Validator, Sendable {
     private let range: ClosedRange<Value>
 
-    /// Creates a range validator.
-    ///
-    /// - Parameter range: The acceptable range.
+    /**
+     Creates a range validator.
+
+     - Parameter range: The acceptable range.
+     */
     public init(range: ClosedRange<Value>) {
         self.range = range
     }
@@ -30,11 +32,13 @@ public struct MinimumValidator<Value: Comparable & Sendable>: Validator, Sendabl
     private let minimum: Value
     private let inclusive: Bool
 
-    /// Creates a minimum validator.
-    ///
-    /// - Parameters:
-    ///   - minimum: The minimum value.
-    ///   - inclusive: Whether the minimum is inclusive.
+    /**
+     Creates a minimum validator.
+
+     - Parameters:
+       - minimum: The minimum value.
+       - inclusive: Whether the minimum is inclusive.
+     */
     public init(minimum: Value, inclusive: Bool = true) {
         self.minimum = minimum
         self.inclusive = inclusive
@@ -58,11 +62,13 @@ public struct MaximumValidator<Value: Comparable & Sendable>: Validator, Sendabl
     private let maximum: Value
     private let inclusive: Bool
 
-    /// Creates a maximum validator.
-    ///
-    /// - Parameters:
-    ///   - maximum: The maximum value.
-    ///   - inclusive: Whether the maximum is inclusive.
+    /**
+     Creates a maximum validator.
+
+     - Parameters:
+       - maximum: The maximum value.
+       - inclusive: Whether the maximum is inclusive.
+     */
     public init(maximum: Value, inclusive: Bool = true) {
         self.maximum = maximum
         self.inclusive = inclusive
@@ -85,9 +91,11 @@ public struct MaximumValidator<Value: Comparable & Sendable>: Validator, Sendabl
 public struct PositiveValidator<Value: Numeric & Comparable & Sendable>: Validator, Sendable {
     private let strict: Bool
 
-    /// Creates a positive validator.
-    ///
-    /// - Parameter strict: If true, zero is not considered positive.
+    /**
+     Creates a positive validator.
+
+     - Parameter strict: If true, zero is not considered positive.
+     */
     public init(strict: Bool = true) {
         self.strict = strict
     }
@@ -106,9 +114,11 @@ public struct PositiveValidator<Value: Numeric & Comparable & Sendable>: Validat
 public struct NegativeValidator<Value: Numeric & Comparable & Sendable>: Validator, Sendable {
     private let strict: Bool
 
-    /// Creates a negative validator.
-    ///
-    /// - Parameter strict: If true, zero is not considered negative.
+    /**
+     Creates a negative validator.
+
+     - Parameter strict: If true, zero is not considered negative.
+     */
     public init(strict: Bool = true) {
         self.strict = strict
     }
@@ -149,9 +159,11 @@ public struct OddValidator<Value: BinaryInteger & Sendable>: Validator, Sendable
 public struct MultipleOfValidator<Value: BinaryInteger & Sendable>: Validator, Sendable {
     private let divisor: Value
 
-    /// Creates a multiple-of validator.
-    ///
-    /// - Parameter divisor: The divisor to check against.
+    /**
+     Creates a multiple-of validator.
+
+     - Parameter divisor: The divisor to check against.
+     */
     public init(divisor: Value) {
         self.divisor = divisor
     }

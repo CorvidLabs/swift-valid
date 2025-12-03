@@ -5,16 +5,20 @@
 public struct AnyValidator<Value>: Validator, Sendable {
     private let validateClosure: @Sendable (Value) -> ValidationResult
 
-    /// Creates a type-erased validator from any validator.
-    ///
-    /// - Parameter validator: The validator to type-erase.
+    /**
+     Creates a type-erased validator from any validator.
+
+     - Parameter validator: The validator to type-erase.
+     */
     public init<V: Validator>(_ validator: V) where V.Value == Value {
         self.validateClosure = validator.validate
     }
 
-    /// Creates a type-erased validator from a validation closure.
-    ///
-    /// - Parameter validate: The validation closure.
+    /**
+     Creates a type-erased validator from a validation closure.
+
+     - Parameter validate: The validation closure.
+     */
     public init(validate: @escaping @Sendable (Value) -> ValidationResult) {
         self.validateClosure = validate
     }
@@ -30,27 +34,33 @@ extension AnyValidator {
         AnyValidator { _ in .valid }
     }
 
-    /// Creates a validator that always fails with the given error.
-    ///
-    /// - Parameter error: The error to use.
+    /**
+     Creates a validator that always fails with the given error.
+
+     - Parameter error: The error to use.
+     */
     public static func invalid(error: ValidError) -> AnyValidator<Value> {
         AnyValidator { _ in .invalid([error]) }
     }
 
-    /// Creates a validator that always fails with the given message.
-    ///
-    /// - Parameter message: The error message.
+    /**
+     Creates a validator that always fails with the given message.
+
+     - Parameter message: The error message.
+     */
     public static func invalid(message: String) -> AnyValidator<Value> {
         invalid(error: ValidError(message: message))
     }
 }
 
 extension AnyValidator {
-    /// Creates a validator from a boolean predicate.
-    ///
-    /// - Parameters:
-    ///   - error: The error to use when validation fails.
-    ///   - predicate: The predicate to evaluate.
+    /**
+     Creates a validator from a boolean predicate.
+
+     - Parameters:
+       - error: The error to use when validation fails.
+       - predicate: The predicate to evaluate.
+     */
     public static func predicate(
         error: ValidError,
         _ predicate: @escaping @Sendable (Value) -> Bool
@@ -60,11 +70,13 @@ extension AnyValidator {
         }
     }
 
-    /// Creates a validator from a boolean predicate.
-    ///
-    /// - Parameters:
-    ///   - message: The error message when validation fails.
-    ///   - predicate: The predicate to evaluate.
+    /**
+     Creates a validator from a boolean predicate.
+
+     - Parameters:
+       - message: The error message when validation fails.
+       - predicate: The predicate to evaluate.
+     */
     public static func predicate(
         message: String,
         _ predicate: @escaping @Sendable (Value) -> Bool

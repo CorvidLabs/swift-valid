@@ -8,9 +8,11 @@ public struct LengthValidator: Validator, Sendable {
 
     private let range: ClosedRange<Int>
 
-    /// Creates a length validator.
-    ///
-    /// - Parameter range: The acceptable length range.
+    /**
+     Creates a length validator.
+
+     - Parameter range: The acceptable length range.
+     */
     public init(range: ClosedRange<Int>) {
         self.range = range
     }
@@ -29,23 +31,29 @@ public struct LengthValidator: Validator, Sendable {
 }
 
 extension LengthValidator {
-    /// Creates a validator for exact length.
-    ///
-    /// - Parameter length: The required length.
+    /**
+     Creates a validator for exact length.
+
+     - Parameter length: The required length.
+     */
     public static func exactly(_ length: Int) -> LengthValidator {
         LengthValidator(range: length...length)
     }
 
-    /// Creates a validator for minimum length.
-    ///
-    /// - Parameter minimum: The minimum length.
+    /**
+     Creates a validator for minimum length.
+
+     - Parameter minimum: The minimum length.
+     */
     public static func minimum(_ minimum: Int) -> LengthValidator {
         LengthValidator(range: minimum...Int.max)
     }
 
-    /// Creates a validator for maximum length.
-    ///
-    /// - Parameter maximum: The maximum length.
+    /**
+     Creates a validator for maximum length.
+
+     - Parameter maximum: The maximum length.
+     */
     public static func maximum(_ maximum: Int) -> LengthValidator {
         LengthValidator(range: 0...maximum)
     }
@@ -109,11 +117,13 @@ public struct PatternValidator: Validator, Sendable {
     private let pattern: String
     private let message: String
 
-    /// Creates a pattern validator.
-    ///
-    /// - Parameters:
-    ///   - pattern: The regular expression pattern.
-    ///   - message: The error message when validation fails.
+    /**
+     Creates a pattern validator.
+
+     - Parameters:
+       - pattern: The regular expression pattern.
+       - message: The error message when validation fails.
+     */
     public init(pattern: String, message: String = "String does not match required pattern") {
         self.pattern = pattern
         self.message = message
@@ -140,11 +150,13 @@ public struct ContainsValidator: Validator, Sendable {
     private let substring: String
     private let caseSensitive: Bool
 
-    /// Creates a contains validator.
-    ///
-    /// - Parameters:
-    ///   - substring: The substring to search for.
-    ///   - caseSensitive: Whether the search is case-sensitive.
+    /**
+     Creates a contains validator.
+
+     - Parameters:
+       - substring: The substring to search for.
+       - caseSensitive: Whether the search is case-sensitive.
+     */
     public init(substring: String, caseSensitive: Bool = true) {
         self.substring = substring
         self.caseSensitive = caseSensitive
@@ -173,9 +185,11 @@ public struct PrefixValidator: Validator, Sendable {
 
     private let prefix: String
 
-    /// Creates a prefix validator.
-    ///
-    /// - Parameter prefix: The required prefix.
+    /**
+     Creates a prefix validator.
+
+     - Parameter prefix: The required prefix.
+     */
     public init(prefix: String) {
         self.prefix = prefix
     }
@@ -196,9 +210,11 @@ public struct SuffixValidator: Validator, Sendable {
 
     private let suffix: String
 
-    /// Creates a suffix validator.
-    ///
-    /// - Parameter suffix: The required suffix.
+    /**
+     Creates a suffix validator.
+
+     - Parameter suffix: The required suffix.
+     */
     public init(suffix: String) {
         self.suffix = suffix
     }
