@@ -1,6 +1,8 @@
-/// A protocol for types that can validate themselves.
-///
-/// Implement this protocol to provide validation logic for your custom types.
+/**
+ A protocol for types that can validate themselves.
+
+ Implement this protocol to provide validation logic for your custom types.
+ */
 public protocol Validatable: Sendable {
     /**
      Validates this instance.

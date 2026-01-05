@@ -1,6 +1,8 @@
-/// A protocol for types that can validate values.
-///
-/// Validators are composable and can be combined using logical operators.
+/**
+ A protocol for types that can validate values.
+
+ Validators are composable and can be combined using logical operators.
+ */
 public protocol Validator<Value>: Sendable {
     /// The type of value being validated.
     associatedtype Value
@@ -63,9 +65,11 @@ extension Validator {
         not(error: ValidError(message: message))
     }
 
-    /// Type-erases this validator.
-    ///
-    /// - Returns: A type-erased validator.
+    /**
+     Type-erases this validator.
+    
+     - Returns: A type-erased validator.
+     */
     public func eraseToAnyValidator() -> AnyValidator<Value> {
         AnyValidator(self)
     }

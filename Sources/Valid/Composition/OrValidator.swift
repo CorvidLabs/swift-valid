@@ -1,6 +1,8 @@
-/// A validator that combines two validators using logical OR.
-///
-/// The validation succeeds if either validator succeeds.
+/**
+ A validator that combines two validators using logical OR.
+
+ The validation succeeds if either validator succeeds.
+ */
 public struct OrValidator<First: Validator, Second: Validator>: Validator, Sendable
 where First.Value == Second.Value {
     public typealias Value = First.Value
