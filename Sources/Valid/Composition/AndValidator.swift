@@ -1,6 +1,8 @@
-/// A validator that combines two validators using logical AND.
-///
-/// The validation succeeds only if both validators succeed.
+/**
+ A validator that combines two validators using logical AND.
+
+ The validation succeeds only if both validators succeed.
+ */
 public struct AndValidator<First: Validator, Second: Validator>: Validator, Sendable
 where First.Value == Second.Value {
     public typealias Value = First.Value

@@ -1,6 +1,8 @@
-/// A validator that negates another validator.
-///
-/// The validation succeeds only if the wrapped validator fails.
+/**
+ A validator that negates another validator.
+
+ The validation succeeds only if the wrapped validator fails.
+ */
 public struct NotValidator<Wrapped: Validator>: Validator, Sendable {
     public typealias Value = Wrapped.Value
 

@@ -1,7 +1,9 @@
-/// A validator for a specific property of an object.
-///
-/// Use this to validate individual properties of a struct or class with
-/// descriptive field names in error messages.
+/**
+ A validator for a specific property of an object.
+
+ Use this to validate individual properties of a struct or class with
+ descriptive field names in error messages.
+ */
 public struct PropertyValidator<Root, Value>: Validator
 where Root: Sendable, Value: Sendable {
     private let keyPath: KeyPath<Root, Value>
@@ -144,20 +146,22 @@ public struct SchemaBuilder<Root> where Root: Sendable {
 
 // MARK: - Schema Helper
 
-/// Helper for building validation schemas.
-///
-/// `Schema` provides a namespace for schema-building functionality,
-/// including the `build` method for creating validators using result builders
-/// and the `property` methods for creating property validators.
-///
-/// ## Topics
-///
-/// ### Building Schemas
-/// - ``build(_:)``
-///
-/// ### Creating Property Validators
-/// - ``property(_:fieldName:validator:)``
-/// - ``property(_:fieldName:validate:)``
+/**
+ Helper for building validation schemas.
+
+ `Schema` provides a namespace for schema-building functionality,
+ including the `build` method for creating validators using result builders
+ and the `property` methods for creating property validators.
+
+ ## Topics
+
+ ### Building Schemas
+ - ``build(_:)``
+
+ ### Creating Property Validators
+ - ``property(_:fieldName:validator:)``
+ - ``property(_:fieldName:validate:)``
+ */
 public enum Schema<Root> where Root: Sendable {
     /**
      Creates a validator from a result builder.

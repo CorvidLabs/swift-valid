@@ -1,7 +1,9 @@
-/// A type-erased validator.
-///
-/// Use `AnyValidator` to hide the specific type of a validator while preserving
-/// its validation behavior.
+/**
+ A type-erased validator.
+
+ Use `AnyValidator` to hide the specific type of a validator while preserving
+ its validation behavior.
+ */
 public struct AnyValidator<Value>: Validator, Sendable {
     private let validateClosure: @Sendable (Value) -> ValidationResult
 
