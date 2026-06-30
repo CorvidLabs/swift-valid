@@ -28,7 +28,7 @@ Add the following to your `Package.swift` file:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/0xLeif/swift-valid.git", from: "0.1.0")
+    .package(url: "https://github.com/CorvidLabs/swift-valid.git", from: "0.1.0")
 ]
 ```
 
@@ -217,7 +217,7 @@ do {
 
 ## Design Philosophy
 
-Valid follows the distinctive 0xLeif Swift development patterns:
+Valid follows the distinctive CorvidLabs Swift development patterns:
 
 - **Protocol-Oriented**: Favor protocols and protocol extensions over inheritance
 - **Functional**: Embrace map, flatMap, and other functional patterns
