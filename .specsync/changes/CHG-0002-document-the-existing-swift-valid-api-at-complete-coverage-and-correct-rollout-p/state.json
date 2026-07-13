@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "CHG-0002-document-the-existing-swift-valid-api-at-complete-coverage-and-correct-rollout-p",
+  "slug": "document-the-existing-swift-valid-api-at-complete-coverage-and-correct-rollout-p",
+  "title": "Document the existing Swift Valid API at complete coverage and correct rollout policy gaps",
+  "description": "Document the existing Swift Valid API at complete coverage and correct rollout policy gaps",
+  "kind": "documentation",
+  "state": "accepted",
+  "canonical_applied": true,
+  "base_commit": "51ad66b540c2f5fd14a7acfc7f0ef2ff4e8d25a0",
+  "created_at": 1783981521,
+  "updated_at": 1783982412,
+  "affected_specs": [
+    "valid"
+  ],
+  "affected_paths": [
+    "Sources/",
+    "specs/valid",
+    ".specsync/sdd.json",
+    ".trust.toml",
+    ".github/workflows/trust.yml"
+  ],
+  "no_spec_change": false,
+  "no_spec_change_rationale": null,
+  "acceptance_criteria": [
+    "A stable canonical Valid specification maps every Swift implementation file and every exported declaration.",
+    "Strict SpecSync passes at 100 percent file, line, and export coverage.",
+    "The committed Trust policy blocks lifecycle warnings and requires 100 percent contract coverage.",
+    "README and governance policy files require an SDD change.",
+    "All four agent integrations are current.",
+    "The native build, complete test suite, hosted Trust gate, and CodeQL pass."
+  ],
+  "selected_artifacts": [
+    "context",
+    "docs",
+    "design",
+    "tasks"
+  ],
+  "dependencies": [],
+  "answers": {
+    "architecture_risk": "no",
+    "public_contract": "no"
+  }
+}

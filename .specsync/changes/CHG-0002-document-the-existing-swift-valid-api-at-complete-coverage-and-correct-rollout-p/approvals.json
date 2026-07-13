@@ -1,0 +1,91 @@
+{
+  "approvals": [
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783981932,
+      "digest": "9a1e2136b6aac4ca2666b0b901ca695c8dadd71d69ef17eb2d675af8e756c263",
+      "note": null
+    },
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783982187,
+      "digest": "7590dea06e168ab7e00d53a4fc9ff5126c8aaa7e9098fac04aa670ad03da5906",
+      "note": null
+    },
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783982231,
+      "digest": "7590dea06e168ab7e00d53a4fc9ff5126c8aaa7e9098fac04aa670ad03da5906",
+      "note": null
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783982268,
+      "digest": "ac29280b2579c73a3c69d20a5aee6ca2c738ed467a0e6fa161430e4d031e71ee",
+      "note": "The complete 100-percent contract and all ten requirement mappings passed native verification."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783982412,
+      "digest": "a9295cf2a205aee87415076e0d0ba1a15642eff054acbb84989fa1f3241d9a9a",
+      "note": "Native verification passed after adding explicit immutable SpecSync lifecycle enforcement to the Trust job."
+    }
+  ],
+  "reopenings": [
+    {
+      "schema_version": 1,
+      "change_id": "CHG-0002-document-the-existing-swift-valid-api-at-complete-coverage-and-correct-rollout-p",
+      "actor": "user:0xLeif",
+      "reason": "Review required an explicit immutable SpecSync lifecycle-enforcement step in the Trust job",
+      "timestamp": 1783982381,
+      "from_state": "accepted",
+      "to_state": "verifying",
+      "superseded_approval": {
+        "gate": "acceptance",
+        "actor": "user:0xLeif",
+        "timestamp": 1783982268,
+        "digest": "ac29280b2579c73a3c69d20a5aee6ca2c738ed467a0e6fa161430e4d031e71ee",
+        "note": "The complete 100-percent contract and all ten requirement mappings passed native verification."
+      },
+      "prior_verification": {
+        "timestamp": 1783982246,
+        "commit": "3f26b8d167cf7aa0d1bf826896b0b00dc1863aff",
+        "contract_digest": "7590dea06e168ab7e00d53a4fc9ff5126c8aaa7e9098fac04aa670ad03da5906",
+        "workspace_digest": "7e253020653296d30d555f18dfbcfb6c9953fcbef9b8edbfd2ddd2b75ffd72cf",
+        "acceptance_input_digest": "0d26bb35c2198c9a074da187fb4d5b0321e9a603e4ea85f40b308c306f828f24",
+        "passed": true,
+        "commands": [
+          {
+            "command": "swift build",
+            "success": true,
+            "exit_code": 0
+          },
+          {
+            "command": "swift test",
+            "success": true,
+            "exit_code": 0
+          }
+        ],
+        "requirement_ids": [
+          "REQ-valid-001",
+          "REQ-valid-002",
+          "REQ-valid-003",
+          "REQ-valid-004",
+          "REQ-valid-005",
+          "REQ-valid-006",
+          "REQ-valid-007",
+          "REQ-valid-008",
+          "REQ-valid-009",
+          "REQ-valid-010"
+        ]
+      },
+      "stale_acceptance_input_digest": "0d26bb35c2198c9a074da187fb4d5b0321e9a603e4ea85f40b308c306f828f24",
+      "current_acceptance_input_digest": "8a3ed3455a011d02382b46cf8b333d407ff8b4315dca613bed358a34d18610e1"
+    }
+  ]
+}

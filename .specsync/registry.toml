@@ -1,0 +1,4 @@
+[registry]
+name = "swift-valid"
+[specs]
+valid = "specs/valid/valid.spec.md"

@@ -1,0 +1,119 @@
+{
+  "approvals": [
+    {
+      "gate": "definition",
+      "actor": "0xLeif",
+      "timestamp": 1783906918,
+      "digest": "2c32eb354f5c59f07785f5b9117a999aa09977abaf89368a3b634759d2954ba0",
+      "note": "Organization-wide SpecSync 5.0.1 and Trust 1.0.0 rollout approved"
+    },
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783948020,
+      "digest": "6c0db17db3ad8e3e8377077daea82b34a9e48c495829c9cf69aea469511959e4",
+      "note": "Authorized after replacing circular prerequisites with truthful completed preparation/configuration tasks; closing approval and hosted results remain deferred."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783948160,
+      "digest": "af1108b8aec1a38af96c8f40c942d997a8988c5de3dc14653b0598ccbe2e421e",
+      "note": "Native verification passed; closing approval recorded after verification. Hosted CI remains pending and is not claimed by this approval."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783982267,
+      "digest": "6d78f3732a7c1d08d9b842c2bcab44132c292ad5e4f0de10e37ed1e866512911",
+      "note": "Fresh native build and all 109 tests passed after the audited rollout correction."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783982443,
+      "digest": "9749bb2029c636196fac6bfe0c1e9a127b658f2c35a45f5382d7145fb9af53a4",
+      "note": "Fresh build and all 109 tests passed with explicit lifecycle enforcement in the reviewed Trust workflow."
+    }
+  ],
+  "reopenings": [
+    {
+      "schema_version": 1,
+      "change_id": "CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-swift-valid",
+      "actor": "user:0xLeif",
+      "reason": "Canonical coverage and rollout policy corrections changed the accepted delivery inputs after review",
+      "timestamp": 1783981936,
+      "from_state": "accepted",
+      "to_state": "verifying",
+      "superseded_approval": {
+        "gate": "acceptance",
+        "actor": "user:0xLeif",
+        "timestamp": 1783948160,
+        "digest": "af1108b8aec1a38af96c8f40c942d997a8988c5de3dc14653b0598ccbe2e421e",
+        "note": "Native verification passed; closing approval recorded after verification. Hosted CI remains pending and is not claimed by this approval."
+      },
+      "prior_verification": {
+        "timestamp": 1783948064,
+        "commit": "147c9a4841354e1162607532720b9889377d8b06",
+        "contract_digest": "6c0db17db3ad8e3e8377077daea82b34a9e48c495829c9cf69aea469511959e4",
+        "workspace_digest": "e516772bf5c79287087e0d963aa1c9815ea646d54f81d87ea23ac097e449bc1f",
+        "acceptance_input_digest": "b2d13ae10b221a1690ccad96bef21cb8e12a7f0e6ac9334330e3324e12fbce65",
+        "passed": true,
+        "commands": [
+          {
+            "command": "swift build",
+            "success": true,
+            "exit_code": 0
+          },
+          {
+            "command": "swift test",
+            "success": true,
+            "exit_code": 0
+          }
+        ],
+        "requirement_ids": []
+      },
+      "stale_acceptance_input_digest": "b2d13ae10b221a1690ccad96bef21cb8e12a7f0e6ac9334330e3324e12fbce65",
+      "current_acceptance_input_digest": "eec77b2a9ee3aa97df8ce9fa471ef1824a7dc5ccdef53c1a968f182003d2b6cc"
+    },
+    {
+      "schema_version": 1,
+      "change_id": "CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-swift-valid",
+      "actor": "user:0xLeif",
+      "reason": "Explicit SpecSync lifecycle enforcement changed the accepted rollout delivery inputs",
+      "timestamp": 1783982422,
+      "from_state": "accepted",
+      "to_state": "verifying",
+      "superseded_approval": {
+        "gate": "acceptance",
+        "actor": "user:0xLeif",
+        "timestamp": 1783982267,
+        "digest": "6d78f3732a7c1d08d9b842c2bcab44132c292ad5e4f0de10e37ed1e866512911",
+        "note": "Fresh native build and all 109 tests passed after the audited rollout correction."
+      },
+      "prior_verification": {
+        "timestamp": 1783982163,
+        "commit": "3f26b8d167cf7aa0d1bf826896b0b00dc1863aff",
+        "contract_digest": "6c0db17db3ad8e3e8377077daea82b34a9e48c495829c9cf69aea469511959e4",
+        "workspace_digest": "7e253020653296d30d555f18dfbcfb6c9953fcbef9b8edbfd2ddd2b75ffd72cf",
+        "acceptance_input_digest": "eec77b2a9ee3aa97df8ce9fa471ef1824a7dc5ccdef53c1a968f182003d2b6cc",
+        "passed": true,
+        "commands": [
+          {
+            "command": "swift build",
+            "success": true,
+            "exit_code": 0
+          },
+          {
+            "command": "swift test",
+            "success": true,
+            "exit_code": 0
+          }
+        ],
+        "requirement_ids": []
+      },
+      "stale_acceptance_input_digest": "eec77b2a9ee3aa97df8ce9fa471ef1824a7dc5ccdef53c1a968f182003d2b6cc",
+      "current_acceptance_input_digest": "631127904004da480fc96744410b4079df9e3f02ef07717cac001c5e28452358"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-swift-valid",
+  "slug": "adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-swift-valid",
+  "title": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Swift Valid",
+  "description": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Swift Valid",
+  "kind": "migration",
+  "state": "accepted",
+  "canonical_applied": true,
+  "base_commit": "7cf405b756bfcff28c3a96e3530459b9b970685d",
+  "created_at": 1783886596,
+  "updated_at": 1783982443,
+  "affected_specs": [],
+  "affected_paths": [
+    ".github/",
+    ".specsync/",
+    ".trust.toml",
+    ".augur.toml",
+    ".attest.json",
+    "fledge.toml",
+    "AGENTS.md"
+  ],
+  "no_spec_change": true,
+  "no_spec_change_rationale": "Governance and CI only; public API and behavior are unchanged.",
+  "acceptance_criteria": [
+    "Native Swift build and tests pass; four agents and Trust doctor are healthy; existing platform, DocC, and API boundaries remain unchanged."
+  ],
+  "selected_artifacts": [
+    "context",
+    "research",
+    "design",
+    "plan",
+    "tasks",
+    "testing",
+    "docs"
+  ],
+  "dependencies": [],
+  "answers": {
+    "architecture_risk": "yes",
+    "public_contract": "no"
+  }
+}
