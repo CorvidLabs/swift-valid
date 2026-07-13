@@ -1,22 +1,22 @@
 {
   "hashes": {
-    "specs/valid/testing.md": "b250571fa84a611f5def13601b6410e6f28a2a0e4187950b33c60da5cd03b8d4",
-    "Sources/Valid/Core/AnyValidator.swift": "c7d4bdbdadaf4ed26b796b413f80f9412f94e3d79d4a4741f1f825432ee23292",
-    "specs/valid/requirements.md": "8981d07dbd5d3e3c1e5574792390cf9d230a44ddcf49c5dacf1caced71904655",
-    "Sources/Valid/Schema/Validatable.swift": "f4f2e6c7411e786fbc5d55d5dccef88b2638b6c36a067e5c95225fa4d87111ec",
-    "Sources/Valid/ValidError.swift": "b4bb74bb9217c61aa244965c90c77f150f47c7862d7665d1b57900aa2c1f60b2",
     "Sources/Valid/Core/ValidationResult.swift": "9055fd7aaf190faa426170efcac8212b4ad9794c19159ccd547885c2d273eb38",
-    "Sources/Valid/Validators/CollectionValidation.swift": "c38fe4fc3e715676b2a288625bb7c250eb8024efef7e150fcafef426f4ca0cd1",
+    "Sources/Valid/Validators/StringValidation.swift": "760865de843936e0aa405b80e5f02fb3516731c1bd38726a3627f001b121685a",
+    "Sources/Valid/Core/AnyValidator.swift": "c7d4bdbdadaf4ed26b796b413f80f9412f94e3d79d4a4741f1f825432ee23292",
+    "Sources/Valid/Composition/NotValidator.swift": "88b6b3a95c0566151dcc62c7b0be17b3a2ed643dc1a24a368d3ab8cbb0807974",
+    "Sources/Valid/Validators/NumericValidation.swift": "ef5a52b8fc400da00a194d6f996e30988b013a1c7bb69bbdd236685801fdd092",
+    "specs/valid/valid.spec.md": "10998126c24dc973e800a12b448766dc0fe5540a6347e875e57115128d0191be",
+    "Sources/Valid/Schema/PropertyValidator.swift": "055d5363919409e7e381991e8f5452d93c53b91963315867667c4936e33ed568",
+    "Sources/Valid/Composition/OrValidator.swift": "96ca8b3e621da3fba05b8b05d8c607353e9ba67d71078d09ffca68c7b0266f48",
     ".specsync/config.toml": "2e2ca2f7a1cd873887818ffffdb520b4f2f35f31a3509fc1427d5d4e256d537c",
+    "specs/valid/requirements.md": "8981d07dbd5d3e3c1e5574792390cf9d230a44ddcf49c5dacf1caced71904655",
+    "Sources/Valid/Composition/AndValidator.swift": "a31fec18c7dd6d8efd259e70ddc2897e2b074ee21ed1768f6ad4498d2ace29b9",
     "specs/valid/tasks.md": "0e433e58e8c641d86a8f81a1272a49bd433fa644993b02988a71fab693d082b2",
     "specs/valid/context.md": "82d33245bc03e1f57c3844614a666320466ec49b09bfcd202d7837765df7b7bb",
-    "specs/valid/valid.spec.md": "10998126c24dc973e800a12b448766dc0fe5540a6347e875e57115128d0191be",
-    "Sources/Valid/Composition/AndValidator.swift": "a31fec18c7dd6d8efd259e70ddc2897e2b074ee21ed1768f6ad4498d2ace29b9",
-    "Sources/Valid/Validators/NumericValidation.swift": "ef5a52b8fc400da00a194d6f996e30988b013a1c7bb69bbdd236685801fdd092",
-    "Sources/Valid/Core/Validator.swift": "2510f712827e8423355a92f66f7c55524e225e6e324cebdae8eb96b505451701",
-    "Sources/Valid/Validators/StringValidation.swift": "760865de843936e0aa405b80e5f02fb3516731c1bd38726a3627f001b121685a",
-    "Sources/Valid/Composition/OrValidator.swift": "96ca8b3e621da3fba05b8b05d8c607353e9ba67d71078d09ffca68c7b0266f48",
-    "Sources/Valid/Schema/PropertyValidator.swift": "055d5363919409e7e381991e8f5452d93c53b91963315867667c4936e33ed568",
-    "Sources/Valid/Composition/NotValidator.swift": "88b6b3a95c0566151dcc62c7b0be17b3a2ed643dc1a24a368d3ab8cbb0807974"
+    "specs/valid/testing.md": "b250571fa84a611f5def13601b6410e6f28a2a0e4187950b33c60da5cd03b8d4",
+    "Sources/Valid/ValidError.swift": "b4bb74bb9217c61aa244965c90c77f150f47c7862d7665d1b57900aa2c1f60b2",
+    "Sources/Valid/Validators/CollectionValidation.swift": "c38fe4fc3e715676b2a288625bb7c250eb8024efef7e150fcafef426f4ca0cd1",
+    "Sources/Valid/Schema/Validatable.swift": "f4f2e6c7411e786fbc5d55d5dccef88b2638b6c36a067e5c95225fa4d87111ec",
+    "Sources/Valid/Core/Validator.swift": "2510f712827e8423355a92f66f7c55524e225e6e324cebdae8eb96b505451701"
   }
 }
