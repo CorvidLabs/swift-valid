@@ -1,6 +1,6 @@
 ---
 module: valid
-version: 1
+version: 2
 status: stable
 files:
   - Sources/Valid/Composition/AndValidator.swift
@@ -184,3 +184,4 @@ without shared mutable state.
 | Date | Author | Change |
 |------|--------|--------|
 | 2026-07-13 | 0xLeif | Captured the existing Swift Valid 1.x contract for SpecSync 5 governance. |
+| 2026-07-13 | CHG-0002-document-the-existing-swift-valid-api-at-complete-coverage-and-correct-rollout-p: Document the existing Swift Valid API at complete coverage and correct rollout policy gaps |

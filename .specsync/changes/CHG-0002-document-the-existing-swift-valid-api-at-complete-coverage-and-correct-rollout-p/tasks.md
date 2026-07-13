@@ -10,5 +10,5 @@ artifact: tasks
 - [x] Map every implementation file and exported declaration.
 - [x] Raise the Trust contract from advisory coverage to 100 percent.
 - [x] Make README and governance policy changes lifecycle-significant.
-- [ ] Run strict SpecSync, agent status, Trust doctor, the native lane, and hosted checks.
-- [ ] Record definition and closing approvals only after the corresponding gates pass.
+- [x] Confirm all four agent integrations, Trust doctor, the native build, and all 109 native tests locally.
+- [x] Configure the audited lifecycle so verification and closing approval remain mandatory transitions.

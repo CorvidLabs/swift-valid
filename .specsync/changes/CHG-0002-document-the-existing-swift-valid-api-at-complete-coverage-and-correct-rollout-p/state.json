@@ -5,10 +5,11 @@
   "title": "Document the existing Swift Valid API at complete coverage and correct rollout policy gaps",
   "description": "Document the existing Swift Valid API at complete coverage and correct rollout policy gaps",
   "kind": "documentation",
-  "state": "implementing",
+  "state": "accepted",
+  "canonical_applied": true,
   "base_commit": "51ad66b540c2f5fd14a7acfc7f0ef2ff4e8d25a0",
   "created_at": 1783981521,
-  "updated_at": 1783981932,
+  "updated_at": 1783982268,
   "affected_specs": [
     "valid"
   ],

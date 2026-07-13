@@ -20,6 +20,13 @@
       "timestamp": 1783948160,
       "digest": "af1108b8aec1a38af96c8f40c942d997a8988c5de3dc14653b0598ccbe2e421e",
       "note": "Native verification passed; closing approval recorded after verification. Hosted CI remains pending and is not claimed by this approval."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783982267,
+      "digest": "6d78f3732a7c1d08d9b842c2bcab44132c292ad5e4f0de10e37ed1e866512911",
+      "note": "Fresh native build and all 109 tests passed after the audited rollout correction."
     }
   ],
   "reopenings": [
