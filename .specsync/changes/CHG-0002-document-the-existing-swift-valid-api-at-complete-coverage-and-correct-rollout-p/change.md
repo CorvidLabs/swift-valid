@@ -1,6 +1,6 @@
 ---
 id: CHG-0002-document-the-existing-swift-valid-api-at-complete-coverage-and-correct-rollout-p
-state: verifying
+state: accepted
 type: documentation
 base_commit: 51ad66b540c2f5fd14a7acfc7f0ef2ff4e8d25a0
 ---

@@ -27,6 +27,13 @@
       "timestamp": 1783982268,
       "digest": "ac29280b2579c73a3c69d20a5aee6ca2c738ed467a0e6fa161430e4d031e71ee",
       "note": "The complete 100-percent contract and all ten requirement mappings passed native verification."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783982412,
+      "digest": "a9295cf2a205aee87415076e0d0ba1a15642eff054acbb84989fa1f3241d9a9a",
+      "note": "Native verification passed after adding explicit immutable SpecSync lifecycle enforcement to the Trust job."
     }
   ],
   "reopenings": [

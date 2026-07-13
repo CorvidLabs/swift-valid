@@ -27,6 +27,13 @@
       "timestamp": 1783982267,
       "digest": "6d78f3732a7c1d08d9b842c2bcab44132c292ad5e4f0de10e37ed1e866512911",
       "note": "Fresh native build and all 109 tests passed after the audited rollout correction."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783982443,
+      "digest": "9749bb2029c636196fac6bfe0c1e9a127b658f2c35a45f5382d7145fb9af53a4",
+      "note": "Fresh build and all 109 tests passed with explicit lifecycle enforcement in the reviewed Trust workflow."
     }
   ],
   "reopenings": [
@@ -68,6 +75,45 @@
       },
       "stale_acceptance_input_digest": "b2d13ae10b221a1690ccad96bef21cb8e12a7f0e6ac9334330e3324e12fbce65",
       "current_acceptance_input_digest": "eec77b2a9ee3aa97df8ce9fa471ef1824a7dc5ccdef53c1a968f182003d2b6cc"
+    },
+    {
+      "schema_version": 1,
+      "change_id": "CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-swift-valid",
+      "actor": "user:0xLeif",
+      "reason": "Explicit SpecSync lifecycle enforcement changed the accepted rollout delivery inputs",
+      "timestamp": 1783982422,
+      "from_state": "accepted",
+      "to_state": "verifying",
+      "superseded_approval": {
+        "gate": "acceptance",
+        "actor": "user:0xLeif",
+        "timestamp": 1783982267,
+        "digest": "6d78f3732a7c1d08d9b842c2bcab44132c292ad5e4f0de10e37ed1e866512911",
+        "note": "Fresh native build and all 109 tests passed after the audited rollout correction."
+      },
+      "prior_verification": {
+        "timestamp": 1783982163,
+        "commit": "3f26b8d167cf7aa0d1bf826896b0b00dc1863aff",
+        "contract_digest": "6c0db17db3ad8e3e8377077daea82b34a9e48c495829c9cf69aea469511959e4",
+        "workspace_digest": "7e253020653296d30d555f18dfbcfb6c9953fcbef9b8edbfd2ddd2b75ffd72cf",
+        "acceptance_input_digest": "eec77b2a9ee3aa97df8ce9fa471ef1824a7dc5ccdef53c1a968f182003d2b6cc",
+        "passed": true,
+        "commands": [
+          {
+            "command": "swift build",
+            "success": true,
+            "exit_code": 0
+          },
+          {
+            "command": "swift test",
+            "success": true,
+            "exit_code": 0
+          }
+        ],
+        "requirement_ids": []
+      },
+      "stale_acceptance_input_digest": "eec77b2a9ee3aa97df8ce9fa471ef1824a7dc5ccdef53c1a968f182003d2b6cc",
+      "current_acceptance_input_digest": "631127904004da480fc96744410b4079df9e3f02ef07717cac001c5e28452358"
     }
   ]
 }
