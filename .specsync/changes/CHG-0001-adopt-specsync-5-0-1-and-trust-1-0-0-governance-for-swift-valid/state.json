@@ -5,10 +5,10 @@
   "title": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Swift Valid",
   "description": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Swift Valid",
   "kind": "migration",
-  "state": "draft",
+  "state": "accepted",
   "base_commit": "7cf405b756bfcff28c3a96e3530459b9b970685d",
   "created_at": 1783886596,
-  "updated_at": 1783886605,
+  "updated_at": 1783948160,
   "affected_specs": [],
   "affected_paths": [
     ".github/",

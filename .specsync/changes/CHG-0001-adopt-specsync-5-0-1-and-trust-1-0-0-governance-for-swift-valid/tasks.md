@@ -8,4 +8,5 @@ artifact: tasks
 - [x] Add governance configuration.
 - [x] Install four agent integrations.
 - [x] Validate native build and tests.
-- [ ] Obtain owner definition and closing approvals.
+- [x] Record the authorized definition approval as `user:0xLeif`.
+- [x] Prepare the change artifacts for verification and a later closing-approval decision.
