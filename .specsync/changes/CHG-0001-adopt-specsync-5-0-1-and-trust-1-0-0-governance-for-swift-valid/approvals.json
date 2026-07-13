@@ -21,5 +21,46 @@
       "digest": "af1108b8aec1a38af96c8f40c942d997a8988c5de3dc14653b0598ccbe2e421e",
       "note": "Native verification passed; closing approval recorded after verification. Hosted CI remains pending and is not claimed by this approval."
     }
+  ],
+  "reopenings": [
+    {
+      "schema_version": 1,
+      "change_id": "CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-swift-valid",
+      "actor": "user:0xLeif",
+      "reason": "Canonical coverage and rollout policy corrections changed the accepted delivery inputs after review",
+      "timestamp": 1783981936,
+      "from_state": "accepted",
+      "to_state": "verifying",
+      "superseded_approval": {
+        "gate": "acceptance",
+        "actor": "user:0xLeif",
+        "timestamp": 1783948160,
+        "digest": "af1108b8aec1a38af96c8f40c942d997a8988c5de3dc14653b0598ccbe2e421e",
+        "note": "Native verification passed; closing approval recorded after verification. Hosted CI remains pending and is not claimed by this approval."
+      },
+      "prior_verification": {
+        "timestamp": 1783948064,
+        "commit": "147c9a4841354e1162607532720b9889377d8b06",
+        "contract_digest": "6c0db17db3ad8e3e8377077daea82b34a9e48c495829c9cf69aea469511959e4",
+        "workspace_digest": "e516772bf5c79287087e0d963aa1c9815ea646d54f81d87ea23ac097e449bc1f",
+        "acceptance_input_digest": "b2d13ae10b221a1690ccad96bef21cb8e12a7f0e6ac9334330e3324e12fbce65",
+        "passed": true,
+        "commands": [
+          {
+            "command": "swift build",
+            "success": true,
+            "exit_code": 0
+          },
+          {
+            "command": "swift test",
+            "success": true,
+            "exit_code": 0
+          }
+        ],
+        "requirement_ids": []
+      },
+      "stale_acceptance_input_digest": "b2d13ae10b221a1690ccad96bef21cb8e12a7f0e6ac9334330e3324e12fbce65",
+      "current_acceptance_input_digest": "eec77b2a9ee3aa97df8ce9fa471ef1824a7dc5ccdef53c1a968f182003d2b6cc"
+    }
   ]
 }

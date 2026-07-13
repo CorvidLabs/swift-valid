@@ -22,6 +22,8 @@
     "pyproject.toml",
     "uv.lock",
     "requirements.txt",
+    "README.md",
+    "AGENTS.md",
     ".specsync/sdd.json",
     ".specsync/config.toml",
     ".specsync/config.json",
