@@ -34,6 +34,13 @@
       "timestamp": 1783982412,
       "digest": "a9295cf2a205aee87415076e0d0ba1a15642eff054acbb84989fa1f3241d9a9a",
       "note": "Native verification passed after adding explicit immutable SpecSync lifecycle enforcement to the Trust job."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1784416433,
+      "digest": "c6392ce2f7a389dc896dd53974c24acb65ad516a44ceaa237c6e59540437a30f",
+      "note": "Re-acceptance with the Trust 1.1.1 and SpecSync 5.1.1 pins; canonical deltas were already integrated and were not replayed."
     }
   ],
   "reopenings": [
@@ -86,6 +93,56 @@
       },
       "stale_acceptance_input_digest": "0d26bb35c2198c9a074da187fb4d5b0321e9a603e4ea85f40b308c306f828f24",
       "current_acceptance_input_digest": "8a3ed3455a011d02382b46cf8b333d407ff8b4315dca613bed358a34d18610e1"
+    },
+    {
+      "schema_version": 1,
+      "change_id": "CHG-0002-document-the-existing-swift-valid-api-at-complete-coverage-and-correct-rollout-p",
+      "actor": "user:0xLeif",
+      "reason": "Trust 1.1.1 and SpecSync 5.1.1 pins changed governed delivery inputs; accepted verification is stale.",
+      "timestamp": 1784415627,
+      "from_state": "accepted",
+      "to_state": "verifying",
+      "superseded_approval": {
+        "gate": "acceptance",
+        "actor": "user:0xLeif",
+        "timestamp": 1783982412,
+        "digest": "a9295cf2a205aee87415076e0d0ba1a15642eff054acbb84989fa1f3241d9a9a",
+        "note": "Native verification passed after adding explicit immutable SpecSync lifecycle enforcement to the Trust job."
+      },
+      "prior_verification": {
+        "timestamp": 1783982407,
+        "commit": "f93e967a2d0868aa54af3a2d5f8311e05bca9d84",
+        "contract_digest": "7590dea06e168ab7e00d53a4fc9ff5126c8aaa7e9098fac04aa670ad03da5906",
+        "workspace_digest": "d74a3cf2ca2eb414b575b6faa666af1e127de308a6d7e84c22238df68eb4222e",
+        "acceptance_input_digest": "8a3ed3455a011d02382b46cf8b333d407ff8b4315dca613bed358a34d18610e1",
+        "passed": true,
+        "commands": [
+          {
+            "command": "swift build",
+            "success": true,
+            "exit_code": 0
+          },
+          {
+            "command": "swift test",
+            "success": true,
+            "exit_code": 0
+          }
+        ],
+        "requirement_ids": [
+          "REQ-valid-001",
+          "REQ-valid-002",
+          "REQ-valid-003",
+          "REQ-valid-004",
+          "REQ-valid-005",
+          "REQ-valid-006",
+          "REQ-valid-007",
+          "REQ-valid-008",
+          "REQ-valid-009",
+          "REQ-valid-010"
+        ]
+      },
+      "stale_acceptance_input_digest": "8a3ed3455a011d02382b46cf8b333d407ff8b4315dca613bed358a34d18610e1",
+      "current_acceptance_input_digest": "a3838adbacacbbabd30cf1067a7803296b830576e5f3fd6df52d1fdd3e4fe710"
     }
   ]
 }

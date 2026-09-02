@@ -34,6 +34,13 @@
       "timestamp": 1783982443,
       "digest": "9749bb2029c636196fac6bfe0c1e9a127b658f2c35a45f5382d7145fb9af53a4",
       "note": "Fresh build and all 109 tests passed with explicit lifecycle enforcement in the reviewed Trust workflow."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1784416390,
+      "digest": "9b12a4774acaf28c5976545d10093fe3135f1f9e0bd8980157fdfb0aad76bb4f",
+      "note": "Re-acceptance with the Trust 1.1.1 and SpecSync 5.1.1 pins; canonical deltas were already integrated and were not replayed."
     }
   ],
   "reopenings": [
@@ -114,6 +121,45 @@
       },
       "stale_acceptance_input_digest": "eec77b2a9ee3aa97df8ce9fa471ef1824a7dc5ccdef53c1a968f182003d2b6cc",
       "current_acceptance_input_digest": "631127904004da480fc96744410b4079df9e3f02ef07717cac001c5e28452358"
+    },
+    {
+      "schema_version": 1,
+      "change_id": "CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-swift-valid",
+      "actor": "user:0xLeif",
+      "reason": "Trust 1.1.1 and SpecSync 5.1.1 pins changed governed delivery inputs; accepted verification is stale.",
+      "timestamp": 1784415617,
+      "from_state": "accepted",
+      "to_state": "verifying",
+      "superseded_approval": {
+        "gate": "acceptance",
+        "actor": "user:0xLeif",
+        "timestamp": 1783982443,
+        "digest": "9749bb2029c636196fac6bfe0c1e9a127b658f2c35a45f5382d7145fb9af53a4",
+        "note": "Fresh build and all 109 tests passed with explicit lifecycle enforcement in the reviewed Trust workflow."
+      },
+      "prior_verification": {
+        "timestamp": 1783982433,
+        "commit": "f93e967a2d0868aa54af3a2d5f8311e05bca9d84",
+        "contract_digest": "6c0db17db3ad8e3e8377077daea82b34a9e48c495829c9cf69aea469511959e4",
+        "workspace_digest": "d74a3cf2ca2eb414b575b6faa666af1e127de308a6d7e84c22238df68eb4222e",
+        "acceptance_input_digest": "631127904004da480fc96744410b4079df9e3f02ef07717cac001c5e28452358",
+        "passed": true,
+        "commands": [
+          {
+            "command": "swift build",
+            "success": true,
+            "exit_code": 0
+          },
+          {
+            "command": "swift test",
+            "success": true,
+            "exit_code": 0
+          }
+        ],
+        "requirement_ids": []
+      },
+      "stale_acceptance_input_digest": "631127904004da480fc96744410b4079df9e3f02ef07717cac001c5e28452358",
+      "current_acceptance_input_digest": "3185c03b3256a59af5cf67971be41f90e180f177bf7819b7079ce558e4338b3f"
     }
   ]
 }

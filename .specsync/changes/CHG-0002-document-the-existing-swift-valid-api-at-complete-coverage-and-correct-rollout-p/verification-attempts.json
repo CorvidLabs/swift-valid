@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "attempts": [
+    {
+      "timestamp": 1784416409,
+      "commit": "19888aa6e185dd2a67326329d87a723c5e6743ed",
+      "contract_digest": "7590dea06e168ab7e00d53a4fc9ff5126c8aaa7e9098fac04aa670ad03da5906",
+      "workspace_digest": "9f1873fb751434a752b9ee1efb7a6cc5af4fd079fecf6fb0a33329bcf58a04c9",
+      "passed": true,
+      "commands": [
+        {
+          "command": "swift build",
+          "success": true,
+          "exit_code": 0
+        },
+        {
+          "command": "swift test",
+          "success": true,
+          "exit_code": 0
+        }
+      ],
+      "requirement_ids": [
+        "REQ-valid-001",
+        "REQ-valid-002",
+        "REQ-valid-003",
+        "REQ-valid-004",
+        "REQ-valid-005",
+        "REQ-valid-006",
+        "REQ-valid-007",
+        "REQ-valid-008",
+        "REQ-valid-009",
+        "REQ-valid-010"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "attempts": [
+    {
+      "timestamp": 1784415661,
+      "commit": "19888aa6e185dd2a67326329d87a723c5e6743ed",
+      "contract_digest": "6c0db17db3ad8e3e8377077daea82b34a9e48c495829c9cf69aea469511959e4",
+      "workspace_digest": "9f1873fb751434a752b9ee1efb7a6cc5af4fd079fecf6fb0a33329bcf58a04c9",
+      "passed": true,
+      "commands": [
+        {
+          "command": "swift build",
+          "success": true,
+          "exit_code": 0
+        },
+        {
+          "command": "swift test",
+          "success": true,
+          "exit_code": 0
+        }
+      ],
+      "requirement_ids": []
+    }
+  ]
+}

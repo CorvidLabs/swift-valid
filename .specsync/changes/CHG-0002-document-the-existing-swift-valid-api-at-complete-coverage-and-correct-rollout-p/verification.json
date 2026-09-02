@@ -1,9 +1,234 @@
 {
-  "timestamp": 1783982407,
-  "commit": "f93e967a2d0868aa54af3a2d5f8311e05bca9d84",
+  "timestamp": 1784416409,
+  "commit": "19888aa6e185dd2a67326329d87a723c5e6743ed",
   "contract_digest": "7590dea06e168ab7e00d53a4fc9ff5126c8aaa7e9098fac04aa670ad03da5906",
-  "workspace_digest": "d74a3cf2ca2eb414b575b6faa666af1e127de308a6d7e84c22238df68eb4222e",
-  "acceptance_input_digest": "8a3ed3455a011d02382b46cf8b333d407ff8b4315dca613bed358a34d18610e1",
+  "workspace_digest": "9f1873fb751434a752b9ee1efb7a6cc5af4fd079fecf6fb0a33329bcf58a04c9",
+  "acceptance_input_digest": "318e03c0e7fcd14134aca7d788610dd6c96fa3b66556b8e2ea9ccc3c5d76f6a0",
+  "acceptance_manifest": {
+    "schema_version": 1,
+    "entries": [
+      {
+        "path": ".github/workflows/trust.yml",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "157cfadf4559df8add7a95e6f5660b2b7513b054cfdc6ea680cd1ce4eee69580",
+        "entry_digest": "f3625615d05214f5745bdacb50b0c2b121817d7db89faaab86248e3346c4c211",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": ".specsync/sdd.json",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "af480f968b511b9ad0d300dc2b1a6ec001fe38807ff12285d9e58b3a01c5c63d",
+        "entry_digest": "b581d0215485aaa6c2c98e52a6b824af4e1e2f7592c11cdd03dc96eadd1e4332",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": ".trust.toml",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "b513d490b776f05334b44cc62e984085bd566b6f5880a7027042cbbf4bbc9637",
+        "entry_digest": "d83ba55fe94640f12b4c4066967ee1372235e07ded91bdd2206284b1b3500cb5",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": "Sources/Valid/Composition/AndValidator.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "a31fec18c7dd6d8efd259e70ddc2897e2b074ee21ed1768f6ad4498d2ace29b9",
+        "entry_digest": "a9bc0488c8fab3938674a12c6981c9ce423956788a8d77259861a2e94a718e90",
+        "owners": [
+          "valid"
+        ]
+      },
+      {
+        "path": "Sources/Valid/Composition/NotValidator.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "88b6b3a95c0566151dcc62c7b0be17b3a2ed643dc1a24a368d3ab8cbb0807974",
+        "entry_digest": "beba2daade4346c61c38ef1f551b14456db117d6447b7780dedfef39d3fe976c",
+        "owners": [
+          "valid"
+        ]
+      },
+      {
+        "path": "Sources/Valid/Composition/OrValidator.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "96ca8b3e621da3fba05b8b05d8c607353e9ba67d71078d09ffca68c7b0266f48",
+        "entry_digest": "732bb74f8d77c23f6d294c6c08c6d45f2014caadd56b2e7dfadf8217c5e766a2",
+        "owners": [
+          "valid"
+        ]
+      },
+      {
+        "path": "Sources/Valid/Core/AnyValidator.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "c7d4bdbdadaf4ed26b796b413f80f9412f94e3d79d4a4741f1f825432ee23292",
+        "entry_digest": "1ab3c30386cd0f0db18390e1c8b0324c83da4b602518e3a6f482dc8697ce3d0f",
+        "owners": [
+          "valid"
+        ]
+      },
+      {
+        "path": "Sources/Valid/Core/ValidationResult.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "9055fd7aaf190faa426170efcac8212b4ad9794c19159ccd547885c2d273eb38",
+        "entry_digest": "1017917f7e2eeac3d77c364e8cce078339813d47f0623c03419a8fc3f47a38fc",
+        "owners": [
+          "valid"
+        ]
+      },
+      {
+        "path": "Sources/Valid/Core/Validator.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "2510f712827e8423355a92f66f7c55524e225e6e324cebdae8eb96b505451701",
+        "entry_digest": "a079c1e5eb347b4ab1249732416df0198e33090c68f0e67fca44142608715ca9",
+        "owners": [
+          "valid"
+        ]
+      },
+      {
+        "path": "Sources/Valid/Schema/PropertyValidator.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "055d5363919409e7e381991e8f5452d93c53b91963315867667c4936e33ed568",
+        "entry_digest": "88567991e2d1f9f3c6728bb0e931336a3eb41339fb226dcf14cbb0eb758947e9",
+        "owners": [
+          "valid"
+        ]
+      },
+      {
+        "path": "Sources/Valid/Schema/Validatable.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "f4f2e6c7411e786fbc5d55d5dccef88b2638b6c36a067e5c95225fa4d87111ec",
+        "entry_digest": "7df9d0c173d98185274cd898f6a08d3c3f1dc38e650d0ff13bd91da2d2a0c11b",
+        "owners": [
+          "valid"
+        ]
+      },
+      {
+        "path": "Sources/Valid/Valid.docc/Valid.md",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "24ca0d81a3e539d93797489522492783afd799756843a9919dabd55b64ebb238",
+        "entry_digest": "2d6354b408086656fea06c5195839de5328573146afaab43fb389a6a92ea6ff9",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": "Sources/Valid/ValidError.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "b4bb74bb9217c61aa244965c90c77f150f47c7862d7665d1b57900aa2c1f60b2",
+        "entry_digest": "a510c8e63224ab75626c22886ab81afb1583069ce6e0951094ea3c6dda6fcc45",
+        "owners": [
+          "valid"
+        ]
+      },
+      {
+        "path": "Sources/Valid/Validators/CollectionValidation.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "c38fe4fc3e715676b2a288625bb7c250eb8024efef7e150fcafef426f4ca0cd1",
+        "entry_digest": "92ddb9787f470c6458883a4d4f12ebea10548274a176ec0bb0f387187c027874",
+        "owners": [
+          "valid"
+        ]
+      },
+      {
+        "path": "Sources/Valid/Validators/NumericValidation.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "ef5a52b8fc400da00a194d6f996e30988b013a1c7bb69bbdd236685801fdd092",
+        "entry_digest": "62d2af32514e4b5df81a935e971ca4a3a8072180654814c5023e123fe446716b",
+        "owners": [
+          "valid"
+        ]
+      },
+      {
+        "path": "Sources/Valid/Validators/StringValidation.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "760865de843936e0aa405b80e5f02fb3516731c1bd38726a3627f001b121685a",
+        "entry_digest": "ad83076c8a70a5da1b8ff521134537d104c2e9b52237b718a932c6c5872148ef",
+        "owners": [
+          "valid"
+        ]
+      },
+      {
+        "path": "specs/valid",
+        "kind": "non_file",
+        "mode": 0,
+        "payload_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "entry_digest": "d43f7f96ebfd1ad0e6ee20c69f1d9d539b7a2091ec3663e27ed49f561851d56c",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": "specs/valid/context.md",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "82d33245bc03e1f57c3844614a666320466ec49b09bfcd202d7837765df7b7bb",
+        "entry_digest": "11bb8f1a33e7548289322c541c3e8aaf5cc7faaf2a9295702441ad44fec3ea0d",
+        "owners": [
+          "valid"
+        ]
+      },
+      {
+        "path": "specs/valid/requirements.md",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "8981d07dbd5d3e3c1e5574792390cf9d230a44ddcf49c5dacf1caced71904655",
+        "entry_digest": "1bc241399ba26eb4202af5932f2e263d12ddafc60ae909a746fb6bbc59777f35",
+        "owners": [
+          "valid"
+        ]
+      },
+      {
+        "path": "specs/valid/tasks.md",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "0e433e58e8c641d86a8f81a1272a49bd433fa644993b02988a71fab693d082b2",
+        "entry_digest": "a7bd8d030b3dae04f5334f1e04c0509504d26ea334408c872069a5a05f90fcc6",
+        "owners": [
+          "valid"
+        ]
+      },
+      {
+        "path": "specs/valid/testing.md",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "b250571fa84a611f5def13601b6410e6f28a2a0e4187950b33c60da5cd03b8d4",
+        "entry_digest": "9e0d94190d2609bb66f27a9a268c9011b2e244804fd988be269c98087dc72c0c",
+        "owners": [
+          "valid"
+        ]
+      },
+      {
+        "path": "specs/valid/valid.spec.md",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "10998126c24dc973e800a12b448766dc0fe5540a6347e875e57115128d0191be",
+        "entry_digest": "daf8983c2998ef876e435acc9dcb21fe6ec8ea29ad99103536e3ff67c97879c0",
+        "owners": [
+          "valid"
+        ]
+      }
+    ]
+  },
   "passed": true,
   "commands": [
     {
