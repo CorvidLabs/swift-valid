@@ -19,7 +19,7 @@ jobs:
         id: trust
         uses: CorvidLabs/trust@fcc889f54d8b4892a81af463c5a0250e2be66fc5 # v1.2.0
       - name: Enforce the verified SpecSync lifecycle
-        uses: CorvidLabs/spec-sync@3c2ed4972c8c53ae02ab5dd5775beccd6da3eeb8 # v6.0.0
+        uses: CorvidLabs/spec-sync@v6
         with:
           version: 6.0.0
           strict: true
