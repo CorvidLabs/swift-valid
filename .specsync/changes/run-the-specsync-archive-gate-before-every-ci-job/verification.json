@@ -1,6 +1,6 @@
 {
   "timestamp": 1793542066,
-  "commit": "03ce6f6476a274da1b324e58238bfae0b56d13f0",
+  "commit": "8c09dc8fceb2a9d790a36a512852576951d0ae4f",
   "contract_digest": "b2550e783ffac57f35d989a3447ef1c2feaa6ea6099dbd78625d645b571aad19",
   "workspace_digest": "fcc1dc5cd59401300cc342f261c252f52550a7a045df6427b908afec90643fa0",
   "passed": true,
